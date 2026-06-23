@@ -15,18 +15,16 @@ This project investigates whether the evolution of sociality in Hymenoptera (bee
 ## Repository Structure
 
 ```
-├── scripts/
-│   ├── 01_hymenoptera_tree.R             # Tree + heatmap visualisation
-│   ├── 02_hymenoptera_wilcoxon.R         # Wilcoxon test + ACE transitions
-│   ├── 03_hymenoptera_wilcoxon_plot.R    # Boxplots + results table
-│   ├── 04_hymenoptera_pgls.R             # pGLS + BRUNCH + phylo.d
-│   ├── 05_hymenoptera_blomberg.R         # Blomberg's K phylogenetic signal
-│   └── 06_hymenoptera_final_table.R      # Summary table + bubble plot
-│
+├── 01_hymenoptera_tree.R             # Tree + heatmap visualisation
+├── 02_hymenoptera_wilcoxon.R         # Wilcoxon test + ACE transitions
+├── 03_hymenoptera_wilcoxon_plot.R    # Boxplots + results table
+├── 04_hymenoptera_pgls.R             # pGLS + BRUNCH + phylo.d
+├── 05_hymenoptera_blomberg.R         # Blomberg's K phylogenetic signal
+├── 06_hymenoptera_final_table.R      # Summary table + bubble plot
 └── README.md
 ```
 
-> **Note:** Scripts must be run in numbered order (01 → 06), as later scripts depend on objects created by earlier ones within the same R session.
+> **Note:** Scripts must be run in numbered order (from 01 to 06), as later scripts depend on objects created by earlier ones within the same R session.
 
 ---
 
