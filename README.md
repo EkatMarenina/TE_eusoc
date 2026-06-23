@@ -47,7 +47,7 @@ Raw annotations were harmonised into six categories:
 
 ## Methods Summary
 
-### Step 1 — Tree Construction and Visualisation (`01_hymenoptera_tree.R`)
+### Step 1. Tree Construction and Visualisation (`01_hymenoptera_tree.R`)
 
 - Taxonomic tree built from a six-level hierarchy (suborder → superfamily → family → subfamily → genus → species) using `ape::as.phylo()`
 - Degree-2 nodes collapsed with `ape::collapse.singles()`; polytomies resolved with `ape::multi2di(random = TRUE, seed = 42)`
@@ -56,7 +56,7 @@ Raw annotations were harmonised into six categories:
 
 ---
 
-### Step 2 — Ancestral State Reconstruction + Wilcoxon Test (`02_hymenoptera_wilcoxon.R`)
+### Step 2. Ancestral State Reconstruction + Wilcoxon Test (`02_hymenoptera_wilcoxon.R`)
 
 - Ancestral states of Social/Non-social estimated by Maximum Likelihood ACE (equal-rates model) using `ape::ace()`
 - Evolutionary transitions identified by comparing each internal node to its parent node
@@ -67,7 +67,7 @@ Raw annotations were harmonised into six categories:
 
 ---
 
-### Step 3 — Wilcoxon Visualisation (`03_hymenoptera_wilcoxon_plot.R`)
+### Step 3. Wilcoxon Visualisation (`03_hymenoptera_wilcoxon_plot.R`)
 
 - Boxplots for significant TE classes only, with jittered individual points
 - Summary results table rendered as PDF
@@ -75,7 +75,7 @@ Raw annotations were harmonised into six categories:
 
 ---
 
-### Step 4 — Phylogenetic Comparative Methods (`04_hymenoptera_pgls.R`)
+### Step 4. Phylogenetic Comparative Methods (`04_hymenoptera_pgls.R`)
 
 Three methods implemented via the `caper` package:
 
@@ -94,7 +94,7 @@ Three methods implemented via the `caper` package:
 
 ---
 
-### Step 5 — Blomberg's K (`05_hymenoptera_blomberg.R`)
+### Step 5. Blomberg's K (`05_hymenoptera_blomberg.R`)
 
 - Blomberg's K estimated for each TE class using `phytools::phylosig()` with 1,000 permutations on log1p-transformed values
 - K ranges from 0.13 to 0.65 across TE classes — all below 1 (faster than Brownian)
@@ -105,7 +105,7 @@ Three methods implemented via the `caper` package:
 
 ---
 
-### Step 6 — Final Summary (`06_hymenoptera_final_table.R`)
+### Step 6. Final Summary (`06_hymenoptera_final_table.R`)
 
 - Bubble plot: Wilcoxon significance (x-axis) vs Pagel's lambda (y-axis), point size = Blomberg's K
   - Red zone (upper right): Wilcoxon significant + high lambda → phylogenetic confounding
